@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Merriweather Clock</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Merriweather:wght@900&display=swap">
+    <style>
+        body {
+            font-family: 'Merriweather', serif;
+            font-weight: 900;
+            font-style: italic;
+            text-align: center;
+            margin: 20% auto;
+            font-size: 2em;
+        }
+    </style>
+    <script>
+        function updateClock() {
+            var currentTime = new Date();
+            var hours = currentTime.getHours();
+            var minutes = currentTime.getMinutes();
+            var seconds = currentTime.getSeconds();
+
+            var timeString = `${hours}:${minutes < 10 ? '0' : ''}${minutes}:${seconds < 10 ? '0' : ''}${seconds}`;
+            document.getElementById('clock').innerHTML = timeString;
+        }
+
+        function startClock() {
+            updateClock(); // Initial call
+            setInterval(updateClock, 1000); // Update every second
+        }
+
+        window.onload = startClock;
+    </script>
+</head>
+<body>
+    <div id="clock"></div>
+</body>
+</html>
