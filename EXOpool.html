@@ -12,9 +12,6 @@
         padding: 0;
     }
     #clock {
-        position: fixed;
-        top: 10px;
-        left: 10px;
         font-size: 18px;
         color: #333;
     }
@@ -32,28 +29,26 @@
 <div class="container">
     <h1>Welcome to the Simple Search Engine on EXOpool</h1>
     <!-- The Clock that will probably break the entire website :( -->
-<div id="clock"></div>
-<script>
-function updateClock() {
-  const now = new Date();
-  const hours = String(now.getHours()).padStart(2, '0');
-  const minutes = String(now.getMinutes()).padStart(2, '0');
-  const seconds = String(now.getSeconds()).padStart(2, '0');
-  const timeString = `${hours}:${minutes}:${seconds}`;
-  document.getElementById('clock').textContent = timeString;
-}
-
-// Update the clock every second
-setInterval(updateClock, 1000);
-
-// Initial call to display the clock immediately
-updateClock();
-</script> <!-- End Clock -->
-    <p>I have decided to make my own internet on ZeroTier so you can find sites listed on here as well as IRC Chatrooms and more! Email me @redacted@gmail.com to add your site to this list so far there is 1 IRC chatroom and 1 site</p>
+    <div id="clock"></div>
+    <script>
+        function updateClock() {
+          const now = new Date();
+          const hours = String(now.getHours()).padStart(2, '0');
+          const minutes = String(now.getMinutes()).padStart(2, '0');
+          const seconds = String(now.getSeconds()).padStart(2, '0');
+          const timeString = `${hours}:${minutes}:${seconds}`;
+          document.getElementById('clock').textContent = timeString;
+        }
+        
+        // Update the clock every second
+        setInterval(updateClock, 1000);
+        
+        // Initial call to display the clock immediately
+        updateClock();
+    </script> <!-- End Clock -->
     <hr class="dashed">
     <h2>Indexed Sites:</h2>
     <ul>
-        <hr class="dashed">
         <li>
             <a href="172.24.105.110:6667">172.24.105.110:6667</a><br>
             <hr class="dashed">
