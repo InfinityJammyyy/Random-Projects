@@ -3,46 +3,44 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>f</title>
+<title>VT323 Clock</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=VT323&display=swap">
 <style>
     body {
-        background-color: black;
-        color: white;
-        font-family: Arial, sans-serif;
         margin: 0;
         padding: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        background-color: black;
     }
+
     #clock {
-        font-size: 18px;
+        font-family: 'VT323', monospace;
+        font-size: 2em;
+        text-align: center;
         color: white;
-    <title>VT323 Clock</title>
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=VT323&display=swap">
-    <style>
-        body {
-            font-family: 'VT323', monospace;
-            font-size: 2em;
-            text-align: center;
-            margin: 20% auto;
-        }
-    </style>
-    <script>
-        function updateClock() {
-            var currentTime = new Date();
-            var hours = currentTime.getHours();
-            var minutes = currentTime.getMinutes();
-            var seconds = currentTime.getSeconds();
+    }
+</style>
+<script>
+    function updateClock() {
+        var currentTime = new Date();
+        var hours = currentTime.getHours();
+        var minutes = currentTime.getMinutes();
+        var seconds = currentTime.getSeconds();
 
-            var timeString = `${hours}:${minutes < 10 ? '0' : ''}${minutes}:${seconds < 10 ? '0' : ''}${seconds}`;
-            document.getElementById('clock').innerHTML = timeString;
-        }
+        var timeString = `${hours}:${minutes < 10 ? '0' : ''}${minutes}:${seconds < 10 ? '0' : ''}${seconds}`;
+        document.getElementById('clock').innerHTML = timeString;
+    }
 
-        function startClock() {
-            updateClock(); // Initial call
-            setInterval(updateClock, 1000); // Update every second
-        }
+    function startClock() {
+        updateClock(); // Initial call
+        setInterval(updateClock, 1000); // Update every second
+    }
 
-        window.onload = startClock;
-    </script>
+    window.onload = startClock;
+</script>
 </head>
 <body>
     <div id="clock"></div>
