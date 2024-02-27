@@ -4,25 +4,28 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>VT323 Clock</title>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=VT323&display=swap">
 <style>
     body, html {
         margin: 0;
         padding: 0;
         height: 100%;
         display: flex;
+        flex-direction: column; /* Stack items vertically */
         justify-content: center;
         align-items: center;
         background-color: black;
+        font-family: Arial, sans-serif; /* Change font to Arial */
+        color: white;
     }
 
     #clock {
-        font-family: 'VT323', monospace;
-        font-size: 5em; /* Increased font size */
+        font-size: 20em; /* Increased font size */
         text-align: center;
-        color: white;
-        width: 1115px;
-        height: 791px;
+        margin-bottom: 20px; /* Add margin to separate clock and date */
+    }
+
+    #date {
+        font-size: 2em; /* Adjust font size for the date */
     }
 </style>
 <script>
@@ -34,6 +37,9 @@
 
         var timeString = `${hours}:${minutes < 10 ? '0' : ''}${minutes}:${seconds < 10 ? '0' : ''}${seconds}`;
         document.getElementById('clock').innerHTML = timeString;
+
+        var dateString = currentTime.toDateString();
+        document.getElementById('date').innerHTML = dateString;
     }
 
     function startClock() {
@@ -46,5 +52,6 @@
 </head>
 <body>
     <div id="clock"></div>
+    <div id="date"></div>
 </body>
 </html>
