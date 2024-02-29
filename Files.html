@@ -24,24 +24,61 @@
         border-top: 1px dashed #ccc;
         margin: 20px 0;
     }
-    /* Change link color */
     a {
         color: lightblue;
     }
 </style>
 </head>
 <body>
+<div class="container">
+    <h1>Welcome to the Files (Unfinished)</h1>
+    <!-- The Clock that will probably break the entire website :( -->
+    <div id="clock"></div>
+    <script>
+        function updateClock() {
+          const now = new Date();
+          const hours = String(now.getHours()).padStart(2, '0');
+          const minutes = String(now.getMinutes()).padStart(2, '0');
+          const seconds = String(now.getSeconds()).padStart(2, '0');
+          const timeString = `${hours}:${minutes}:${seconds}`;
+          document.getElementById('clock').textContent = timeString;
+        }
+        
+        // Update the clock every second
+        setInterval(updateClock, 1000);
+        
+        // Initial call to display the clock immediately
+        updateClock();
+    </script> <!-- End Clock -->
+    <hr class="dashed">
+    <h2>Indexed Sites:</h2>
+    <ul>
 
-    <h1 style="width: 1030px;">Windows 95 on Linux with Chicago95, Wine32, and
-      Solitaire 98.</h1>
-  
+    
         <li>
             <hr class="dashed">
-            <a href="http://172.24.105.110/">Test</a><br>
+            <a href="http://172.24.105.110/">172.24.105.110</a><br>
             <em>-- Test --</em>
         </li>
-
-
-
+        
+        <hr class="dashed">
+        
+        <li>
+            <hr class="dashed">
+            <a href="http://172.24.105.110/">172.24.105.110</a><br>
+            <em>-- Test --</em>
+        </li>
+    
+        
+        <hr class="dashed">
+        <p>End of the site list</p>
+    </ul>
+    <hr class="dashed">
+    <p>That is all the indexed filed I have at least at the moment email me to add your own site and have a nice day!</p>
+<span>
+  <a href="http://172.24.105.110/HTMLclock">HTMLclock</a>
+  <p></p>
+  <a href="http://172.24.105.110/Files">Files (Not finished)</a>
+</span></div>
 </body>
 </html>
