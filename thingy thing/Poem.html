@@ -10,7 +10,7 @@
     top: 10px;
     right: 10px;
     z-index: -1;
-    opacity: 0.3;
+    opacity: 0.4;
   }
 
   .dashed {
@@ -46,22 +46,27 @@
     <div class="container">
       <h1><b>Poem of War, The Korean War...<br>
         </b></h1>
-      <b><!-- The Clock that will probably break the entire website :( --></b> <b>
-        <script>
-        function updateClock() {
-          const now = new Date();
-          const hours = String(now.getHours()).padStart(2, '0');
-          const minutes = String(now.getMinutes()).padStart(2, '0');
-          const seconds = String(now.getSeconds()).padStart(2, '0');
-          const timeString = `${hours}:${minutes}:${seconds}`;
-          document.getElementById('clock').textContent = timeString;
-        }
-        
-        setInterval(updateClock, 1000);
-        
-        updateClock();
-    </script>
-        <!-- End Clock --></b>
+  
+    <!-- The Clock that will probably break the entire website :( -->
+    <div id="clock"></div>
+    <script>
+function updateClock() {
+  const now = new Date();
+  const hours = String(now.getHours()).padStart(2, '0');
+  const minutes = String(now.getMinutes()).padStart(2, '0');
+  const seconds = String(now.getSeconds()).padStart(2, '0');
+  const timeString = `${hours}:${minutes}:${seconds}`;
+  document.getElementById('clock').textContent = timeString;
+}
+
+// Update the clock every second
+setInterval(updateClock, 1000);
+
+// Initial call to display the clock immediately
+updateClock();
+</script> <!-- End Clock -->
+
+      
       <hr class="dashed"> <b><span>
           <ul>
             <h2>Indexed Poem:</h2>
