@@ -1,10 +1,10 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Poetry Out Loud</title>
-    <style>
+<head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Poetry Out Loud</title>
+<style>
   #topRightImage {
     position: fixed;
     top: 10px;
@@ -31,196 +31,137 @@
   }
   .container {
     margin: 20px;
+    display: flex;
+    flex-direction: row;
+  }
+  .text {
+    flex: 1;
+  }
+  .image {
+    flex: 1;
+    text-align: right;
   }
   .dashed {
     border: none;
     border-top: 1px dashed #ccc;
     margin: 20px 0;
   }
-
   a {
     color: lightblue;
   }
-</style> </head>
-  <body><b> <img id="topRightImage" src="pictures/POL.png"> </b>
-    <div class="container">
-      <h1><b>Poem of War, The Korean War...<br>
-        </b></h1>
-        <hr class="dashed"> <b><span>
-    <!-- The Clock that will probably break the entire website :( -->
-      
-    <div id="clock"></div>
-    <script>
-function updateClock() {
-  const now = new Date();
-  const hours = String(now.getHours()).padStart(2, '0');
-  const minutes = String(now.getMinutes()).padStart(2, '0');
-  const seconds = String(now.getSeconds()).padStart(2, '0');
-  const timeString = `${hours}:${minutes}:${seconds}`;
-  document.getElementById('clock').textContent = timeString;
-}
+  img {
+    max-width: 100%;
+    height: auto;
+  }
+</style>
+</head>
+<body>
+<b><img id="topRightImage" src="pictures/POL.png"></b>
+<div class="container">
+  <div class="text">
+    <h1><b>Poem of War, The Korean War...<br></b></h1>
+    <hr class="dashed">
+    <b><span>
+      <!-- The Clock that will probably break the entire website :( -->
+      <div id="clock"></div>
+      <script>
+      function updateClock() {
+        const now = new Date();
+        const hours = String(now.getHours()).padStart(2, '0');
+        const minutes = String(now.getMinutes()).padStart(2, '0');
+        const seconds = String(now.getSeconds()).padStart(2, '0');
+        const timeString = `${hours}:${minutes}:${seconds}`;
+        document.getElementById('clock').textContent = timeString;
+      }
 
-// Update the clock every second
-setInterval(updateClock, 1000);
+      // Update the clock every second
+      setInterval(updateClock, 1000);
 
-// Initial call to display the clock immediately
-updateClock();
-</script> 
-      
-<!-- End Clock -->
-      <hr class="dashed"> <b><span>
-          <ul>
-            <h2>Indexed Poem:</h2>
-            There is blood on the hills of Korea <br>
-            Tis the blood of the brave and true.<br>
-            Where the 25th Brigade battled together<br>
-            Under the banner of the Red, White and Blue.<br>
-            As they marched over the fields of Korea<br>
-            To the hill where the enemy lay.<br>
-            They remembered the Brigadiers orders:<br>
-            "These hills must be taken today."<br>
-            Forward they marched into battle<br>
-            With faces unsmiling and stern.<br>
-            They Knew as they charged the hillside<br>
-            That some would never return.<br>
-            <br>
-            Some thought of their wives and mothers,<br>
-            Some thought of their sweethearts so fair<br>
-            And some as they plodded and stumbled,<br>
-            Were reverently whispering a prayer.<br>
-            There is blood on the hills of Korea,<br>
-            It is the gift of freedom they love,<br>
-            May their names live in glory forever,<br>
-            And their souls rest in heaven above.<br>
-            <br>
-            In the field, Korea<br>
-            May 29, 1951<em></em>
-          </ul>
-          <hr class="dashed">
-          <ul>
-            <span style="color: white;"></span>The above poem was composed by
-            Private Patrick J. O'Connor, a stretcher bearer, Royal Canadian
-            Regt. , attached to the 25th U. S. Infantry Division, who was killed
-            in action in the attack on Hill 466 on May 30, 1951. Pat was a man
-            of poetry and had just finished his poem "Korea" just the night
-            before, little knowing that he had less than 24 hours to live. The
-            poem was found among his personal effects the next day. Pat was in
-            action only five days when he was killed on May 30, 1951.<br>
-          </ul>
-          <hr class="dashed">
-          <ul>
-            <p>My take on history: This was just written days before he fell in
-              the battle for Korea. He was a poet and he only lasted 5 days
-              fighting for his country. Patrick J. O'Connor while unknown to the
-              majority of us citizens still cemented a legacy for us and his
-              wife Vera Irene,not as a fighter but as a poet that was the last
-              thing he did before rushing up that Hill, Hill 466. He wrote that
-              poem and only had 24 hours to live. 24 hours can make all the
-              difference, it can&nbsp; change the course of history forever in
-              wild ways.</p>
+      // Initial call to display the clock immediately
+      updateClock();
+      </script>
+      <!-- End Clock -->
+    </span></b>
+    <hr class="dashed">
+    <b><span>
+      <ul>
+        <h2>Indexed Poem:</h2>
+        There is blood on the hills of Korea <br>
+        Tis the blood of the brave and true.<br>
+        Where the 25th Brigade battled together<br>
+        Under the banner of the Red, White and Blue.<br>
+        As they marched over the fields of Korea<br>
+        To the hill where the enemy lay.<br>
+        They remembered the Brigadiers orders:<br>
+        "These hills must be taken today."<br>
+        Forward they marched into battle<br>
+        With faces unsmiling and stern.<br>
+        They Knew as they charged the hillside<br>
+        That some would never return.<br>
+        <br>
+        Some thought of their wives and mothers,<br>
+        Some thought of their sweethearts so fair<br>
+        And some as they plodded and stumbled,<br>
+        Were reverently whispering a prayer.<br>
+        There is blood on the hills of Korea,<br>
+        It is the gift of freedom they love,<br>
+        May their names live in glory forever,<br>
+        And their souls rest in heaven above.<br>
+        <br>
+        In the field, Korea<br>
+        May 29, 1951<em></em>
+      </ul>
+    </span></b>
+    <hr class="dashed">
+    <b><span>
+      <ul>
+        <span style="color: white;"></span>The above poem was composed by
+        Private Patrick J. O'Connor, a stretcher bearer, Royal Canadian
+        Regt. , attached to the 25th U. S. Infantry Division, who was killed
+        in action in the attack on Hill 466 on May 30, 1951. Pat was a man
+        of poetry and had just finished his poem "Korea" just the night
+        before, little knowing that he had less than 24 hours to live. The
+        poem was found among his personal effects the next day. Pat was in
+        action only five days when he was killed on May 30, 1951.<br>
+      </ul>
+    </span></b>
+    <hr class="dashed">
+    <b><span>
+      <ul>
+        <p>My take on history: This was just written days before he fell in
+          the battle for Korea. He was a poet and he only lasted 5 days
+          fighting for his country. Patrick J. O'Connor while unknown to the
+          majority of us citizens still cemented a legacy for us and his
+          wife Vera Irene,not as a fighter but as a poet that was the last
+          thing he did before rushing up that Hill, Hill 466. He wrote that
+          poem and only had 24 hours to live. 24 hours can make all the
+          difference, it can&nbsp; change the course of history forever in
+          wild ways.</p>
 
-            <p>He battled the bloody price of freedoms blissful touch.</p>
-            <ul>
-              <p><span><span>"They Knew as they charged the hillside</span><br>
-                  <span></span><span> That some would never return"</span></span></p>
-            </ul>
-            <p><span><span>He knew that some wouldn't tell the tales of Hill 466
-                  but knew not that he would be one of them</span></span><span>.</span></p>
-            <ul>
-              <p><span></span><span></span><span></span><span>"Where the 25th
-                  Brigade battled together&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <br>
-                  Under the banner of the Red, White and Blue."</span></p>
-            </ul>
-            <p><span>He was part of the 25th Brigade serving the USA even though
-                his homeland was of Canadian origin <br>
-              </span></p>
-            <ul>
-              <p><span>"As they marched over the fields of Korea<br>
-                  To the hill where the enemy lay.<br>
-                  They remembered the Brigadiers orders:<br>
-                  "These hills must be taken today.""<br>
-                </span></p>
-            </ul>
-            <p><span>He knew that this was there big moment, one big push to
-                take over the Hill today there is no time to let enemy hands
-                further taint the sacred land.</span></p>
-            <p><span>And that was his poem a poem of a legacy short lived, he
-                died at age 27, On that lone hill of 466 leaving his wife
-                widowed, and cementing him one of my favorite poets, not for the
-                words, but the context of those words, his death boosts this
-                poem to my favorite it tells the tale of war so perfectly all
-                opportunity stopped short. He could have been anything in a
-                world of uncertainty, but he choose to be a fighter. <br>
-              </span></p>
-            <p><span>The more I research and read his story the more I think
-                about our freedom as a country. Our freedom is a deadly one, one
-                not taken with kindness but hope , forged through the slaying of
-                great evils. Lets not forget what we stand for...<br>
-              </span></p>
-            <p><span>This page remembers who have fallen to war for our freedom
-                not just this dude but to everyone who has fallen for our
-                Republic. As a nation we need to spend more time remembering
-                what our core values are -it is one of freedom no matter the
-                cost, no matter the odds against us we will prevail. Even though
-                some may fall many will prosper and have children be ignorant to
-                how blissful our freedom is. Isn't that the goal of any society
-                to have children unaware by life's brutal torment? <br>
-              </span></p>
-            <p><span>To be happy no matter the situation, To be free to hurt
-                himself to learn to grow to prosper? He fought so we could run
-                we completely freed half a nation from its communist holders
-                just because we looked at one side and we thought it needed more
-                freedom and less totalitarian control.<br>
-              </span></p>
-            <p><span>He was a true Cold Blooded God fearing Freedom loving
-                American. <br>
-              </span></p>
-            <p><span>Even though he was syrup drinking poutine eating Canadian
-                and none of this really applies.<br>
-              </span></p>
-            <p><span>Freedom at all costs no matter the odds. That is why
-                America is so great.<br>
-              </span></p>
-            <p><span>&nbsp;&nbsp;&nbsp; -EXOpool Admin<br>
-              </span></p>
-          </ul>
-        </span><span>
-          <hr class="dashed">
-          <ul>
-            <p><img src="Pictures/Poem.jpg" alt="" style="width: auto; height: 420px;">﻿
-              ﻿ <img src="Pictures/Family.png" alt="" style="width: auto; height: 420px;">﻿&nbsp;<img
-                src="Pictures/Resting_Grounds.jpg" alt="" style="width: auto; height: 420px;"></p>
-            <p>His poem, Him and His Wife, And Finally His resting ground...</p>
-          </ul>
-          <hr class="dashed">
-          <ul>
-            <p><span>Before I go wanted to share more about his death, and I could not say 
-              it better then the wonderful people from sarnia historical society you can 
-              check them out using this link:<br>
-            <p></p>
-                    
-            <a href="https://www.sarniahistoricalsociety.com/warmemorialproject/oconnor-patrick-william-korea-a800440/">Sarniah Historical Society</a> 
-              
-            <p><span>“Patrick O’Connor was fatally wounded on “Hill 466” in Korea while 
-              trying to render first aid to a wounded comrade under intense machine gun 
-              fire from Communist forces. He and another stretcher-bearer ignored danger 
-              in their desire to help the wounded of the Royal Canadian Regiment. The two 
-              men were killed almost instantaneously.”<br>
-
-            <p><span>“On the day Pat was killed, my platoon was leading an attack on 
-              ‘Hill 466’. Half way up the mountain my forward section came under intense 
-              fire which killed two and wounded four others. Pat and his partner came running 
-              up the hill to get the wounded but another burst of fire hit them both. He died 
-              as he had lived, trying to aid others with his wonderful unselfishness.”<br>
-            </ul>
-          <hr class="dashed">
-          <p>That is all! Enjoy your freedom whilst it lasts! Cause like
-            everything in life nothing good lasts forever...</p>
-        
-          <hr class="dashed"> <span> <a href="http://172.24.105.110">Home</a>
-            &nbsp; <a href="http://172.24.105.110/HTMLclock.html">HTMLclock</a>
-            &nbsp; <a href="http://172.24.105.110/Files.html">Files</a> &nbsp;
-          </span> <a href="http://172.24.105.110/Poem.html">Poem</a> 
-        </span></b></div>
-  </body>
-</html>
+        <p>He battled the bloody price of freedoms blissful touch.</p>
+        <ul>
+          <p><span><span>"They Knew as they charged the hillside</span><br>
+              <span></span><span> That some would never return"</span></span></p>
+        </ul>
+        <p><span><span>He knew that some wouldn't tell the tales of Hill 466
+              but knew not that he would be one of them</span></span><span>.</span></p>
+        <ul>
+          <p><span></span><span></span><span></span><span>"Where the 25th
+              Brigade battled together&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <br>
+              Under the banner of the Red, White and Blue."</span></p>
+        </ul>
+        <p><span>He was part of the 25th Brigade serving the USA even though
+            his homeland was of Canadian origin <br>
+          </span></p>
+        <ul>
+          <p><span>"As they marched over the fields of Korea<br>
+              To the hill where the enemy lay.<br>
+              They remembered the Brigadiers orders:<br>
+              "These hills must be taken today.""<br>
+            </span></p>
+        </ul>
+        <p><span>He knew that this was there big moment, one big push to
+            take over the Hill today there is no time to let enemy hands
+            further taint the sacred land.</span></p>
+        <p><span>And that was his poem a poem of a legacy short lived, he
+            died at age 
