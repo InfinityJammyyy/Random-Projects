@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Poetry Out Loud</title>
+  <style>
+    #topRightImage {
+      position: fixed;
+      top: 10px;
+      right: 10px;
+      z-index: -1;
+      opacity: 0.4;
+    }
+
+    .dashed {
+      position: relative;
+      z-index: -2;
+    }
+
+    body {
+      background-color: black;
+      color: white;
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+    }
+
+    #clock {
+      font-size: 18px;
+      color: white;
+    }
+
+    .container {
+      margin: 20px;
+      display: flex;
+      flex-direction: row;
+    }
+
+    .text {
+      flex: 1;
+    }
+
+    .image {
+      flex: 1;
+      text-align: right;
+    }
+
+    img {
+      max-width: 100%;
+      height: auto;
+    }
+
+    .dashed {
+      border: none;
+      border-top: 1px dashed #ccc;
+      margin: 20px 0;
+    }
+
+    a {
+      color: lightblue;
+    }
+  </style>
+</head>
+<body>
+  <b> <img id="topRightImage" src="pictures/POL.png"> </b>
+  <div class="container">
+    <div class="text">
+      <h1><b>Poem of War, The Korean War...<br></b></h1>
+      <hr class="dashed">
+      <b><span>
+        <!-- The Clock that will probably break the entire website :( -->
+        <div id="clock"></div>
+        <script>
+          function updateClock() {
+            const now = new Date();
+            const hours = String(now.getHours()).padStart(2, '0');
+            const minutes = String(now.getMinutes()).padStart(2, '0');
+            const seconds = String(now.getSeconds()).padStart(2, '0');
+            const timeString = `${hours}:${minutes}:${seconds}`;
+            document.getElementById('clock').textContent = timeString;
+          }
+
+          // Update the clock every second
+          setInterval(updateClock, 1000);
+
+          // Initial call to display the clock immediately
+          updateClock();
+        </script> 
+        <!-- End Clock -->
+        <hr class="dashed">
+        <b><span>
+          <ul>
+            <h2>Indexed Poem:</h2>
+            There is blood on the hills of Korea <br>
+            Tis the blood of the brave and true.<br>
+            Where the 25th Brigade battled together<br>
+            Under the banner of the Red, White and Blue.<br>
+            As they marched over the fields of Korea<br>
+            To the hill where the enemy lay.<br>
+            They remembered the Brigadiers orders:<br>
+            "These hills must be taken today."<br>
+            Forward they marched into battle<br>
+            With faces unsmiling and stern.<br>
+            They Knew as they charged the hillside<br>
+            That some would never return.<br>
+            <br>
+            Some thought of their wives and mothers,<br>
+            Some thought of their sweethearts so fair<br>
+            And some as they plodded and stumbled,<br>
+            Were reverently whispering a prayer.<br>
+            There is blood on the hills of Korea,<br>
+            It is the gift of freedom they love,<br>
+            May their names live in glory forever,<br>
+            And their souls rest in heaven above.<br>
+            <br>
+            In the field, Korea<br>
+            May 29, 1951<em></em>
+          </ul>
+          <hr class="dashed">
+          <ul>
+            <p>
+              <img src="pictures/PorkChopHill.jpg" alt="" style="width: auto; height: 420px;">
+            </p>
+          </ul>
+        </span></b>
+    </div>
+  </div>
+</body>
+</html>
